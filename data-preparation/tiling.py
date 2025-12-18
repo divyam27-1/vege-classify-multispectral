@@ -53,7 +53,7 @@ def tile_image(img, tile_size=512):
     return tiles
 
 def convert_band_to_pixel(img, band):
-    arr = (img - BLACK_LEVEL[band]) / 65536.0
+    arr = (img - BLACK_LEVEL[band]) / 65536.5
     arr = np.clip(arr, 0, 1).astype(np.float16)
     arr = (arr * 255).astype(np.uint8)
     
