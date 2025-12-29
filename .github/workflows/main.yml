@@ -11,7 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Track TODO Action
-        uses: ribtoks/tdg-github-action@v0.4.15-beta
+      - name: Create issues from TODOs
+        uses: alstr/todo-to-issue-action@v5
         with:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LABEL: todo
