@@ -35,7 +35,7 @@ def load_multispectral_samples(dataset_dir: str, bands: List[str]) -> List[Dict]
         base, _ = os.path.splitext(fname)
 
         for band, suffix in band_suffixes.items():
-            if base.endswith(suffix):                   #TODO need to change to take from image metadata instead of image name
+            if base.endswith(suffix):                   #TODO: Need to change to take from image metadata instead of image name
                 base_name = base[:-len(suffix)]
                 img = cv2.imread(
                     os.path.join(dataset_dir, fname),
